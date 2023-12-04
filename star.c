@@ -406,14 +406,14 @@ void deleteBlankSpace(int targetIndex) {
         printf("deleteBlankSpace: Element not found with index %d\n", targetIndex);
         return;
     }
-    // Adjuste pointers to delete de element
-
+    
+    // Adjuste pointers to delete the element
     if (prev == NULL){ // If prev is NULL, it never got in the while cycle, so current is the first element of the list.
         firstBlankSpace = current->nextBlankSpace; // The element to be deleted is the first in the list.
     }else{ // Not the first element.
         prev->nextBlankSpace = current->nextBlankSpace;
     }
-    // Liberar la memoria del elemento eliminado
+    // Free memory
     free(current);
 }
 
